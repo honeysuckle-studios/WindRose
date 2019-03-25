@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class PlayerThrowScript : MonoBehaviour
 {
-
     public UnityEvent OnFire;
 
     void Start()
@@ -14,8 +13,9 @@ public class PlayerThrowScript : MonoBehaviour
     }
 
     public void Update()
-    {
-        if( Input.GetButtonDown ("E"))
+    {   
+
+        if ( Input.GetButtonDown ("E"))
         {
             if (OnFire != null)
             {

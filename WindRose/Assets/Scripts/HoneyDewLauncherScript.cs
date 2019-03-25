@@ -7,8 +7,7 @@ public class HoneyDewLauncherScript : MonoBehaviour
     [SerializeField] GameObject Honeydew;
     [SerializeField] Transform Reference;
     [SerializeField] PlayerThrowScript Player;
-
-
+    
     private void OnEnable()
     {
         Player.OnFire.AddListener(Fire);
@@ -20,6 +19,7 @@ public class HoneyDewLauncherScript : MonoBehaviour
         Player.OnFire.RemoveListener(Fire);
     }
 
+   
     private void Fire()
     {
         if (GameObject.FindGameObjectWithTag("HoneyDew") == false)

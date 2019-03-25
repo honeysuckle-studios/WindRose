@@ -7,11 +7,13 @@ public class HoneyDewScript : MonoBehaviour
 
     private Rigidbody H_Rigidbody;
     [SerializeField] float Power;
+    
 
     private void OnEnable()
-    {
-        H_Rigidbody = GetComponent<Rigidbody>();
-        H_Rigidbody.AddForce(transform.forward * Power);
+    { 
+            H_Rigidbody = GetComponent<Rigidbody>();
+            H_Rigidbody.AddForce(transform.forward * Power);
+      
     }
 
     private void OnCollisionEnter(Collision collision)
