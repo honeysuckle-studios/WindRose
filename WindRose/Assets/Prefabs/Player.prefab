@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bcc376f476c4a42a489efa3c8614c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
   jumpHeight: 10
   playerController: {fileID: 58326218742566407}
   gravityScale: 2
