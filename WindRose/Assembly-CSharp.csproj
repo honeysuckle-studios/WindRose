@@ -62,9 +62,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AntFollowHoneyDewScript.cs" />
     <Compile Include="Assets\Scripts\CameraControllingScript.cs" />
+    <Compile Include="Assets\Scripts\ExitRoom.cs" />
     <Compile Include="Assets\Scripts\HoneyDewHoldScript.cs" />
     <Compile Include="Assets\Scripts\HoneyDewLauncherScript.cs" />
     <Compile Include="Assets\Scripts\HoneyDewScript.cs" />
+    <Compile Include="Assets\Scripts\LevelLoad.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\PlayerThrowScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
