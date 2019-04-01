@@ -8,6 +8,7 @@ public class AntFollowHoneyDewScript : MonoBehaviour
     public float speed = 5f;
     public float gap = 1.5f;
     public float smellRange = 15f;
+    public float rotationSpeed = 2f;
 
 
     void Update()
@@ -20,16 +21,12 @@ public class AntFollowHoneyDewScript : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, HoneyDew.position) >= gap)
                 {
-
-                    Vector3 turning = Vector3.RotateTowards(transform.forward, HoneyDew.transform.position, speed * Time.deltaTime, 0.0f);
-                    transform.position = Vector3.MoveTowards(transform.position, HoneyDew.transform.position, speed * Time.deltaTime);
-                    transform.rotation = Quaternion.LookRotation(turning);
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(HoneyDew.position - transform.position), rotationSpeed * Time.deltaTime);
                 }
                 else
                 {
-
-                    Vector3 turning = Vector3.RotateTowards(transform.forward, HoneyDew.transform.position, speed * Time.deltaTime, 0.0f);
-                    transform.rotation = Quaternion.LookRotation(turning);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(HoneyDew.position - transform.position), rotationSpeed * Time.deltaTime);
                 }
             }
             else
@@ -46,16 +43,13 @@ public class AntFollowHoneyDewScript : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, HoneyDew.position) >= gap)
                 {
-
-                    Vector3 turning = Vector3.RotateTowards(transform.forward, HoneyDew.transform.position, speed * Time.deltaTime, 0.0f);
-                    transform.position = Vector3.MoveTowards(transform.position, HoneyDew.transform.position, speed * Time.deltaTime);
-                    transform.rotation = Quaternion.LookRotation(turning);
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(HoneyDew.position - transform.position), rotationSpeed * Time.deltaTime);
                 }
                 else
                 {
 
-                    Vector3 turning = Vector3.RotateTowards(transform.forward, HoneyDew.transform.position, speed * Time.deltaTime, 0.0f);
-                    transform.rotation = Quaternion.LookRotation(turning);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(HoneyDew.position - transform.position), rotationSpeed * Time.deltaTime);
                 }
             }
             else

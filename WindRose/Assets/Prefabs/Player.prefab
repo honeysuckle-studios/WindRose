@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 6316393073038521642}
   - component: {fileID: 1766990483046467940}
   - component: {fileID: 7671328452284136276}
+  - component: {fileID: 1164619936609336795}
   - component: {fileID: 1003210200342791852}
   m_Layer: 0
   m_Name: Player
@@ -240,6 +241,18 @@ MonoBehaviour:
   jumpHeight: 10
   playerController: {fileID: 1766990483046467940}
   gravityScale: 2
+--- !u!114 &1164619936609336795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875384255999399693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcd8ebf080dff24d9f8177e9640f0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1003210200342791852
 MonoBehaviour:
   m_ObjectHideFlags: 0

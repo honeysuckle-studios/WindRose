@@ -13,7 +13,7 @@ public class HoneyDewHoldScript : MonoBehaviour
     }
     public void Update()
     {
-        if(Input.GetButton("Q") && GameObject.FindGameObjectWithTag("HoneyDew") == false)
+        if(Input.GetKey(KeyCode.Mouse1) && GameObject.FindGameObjectWithTag("HoneyDew") == false)
         {
             gameObject.tag = "HoneydewHand";
             rend.enabled = true;

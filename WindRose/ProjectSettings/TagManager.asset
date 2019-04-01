@@ -8,6 +8,7 @@ TagManager:
   - Ant
   - Hidden Honeydew
   - HoneydewHand
+  - Beetle
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - PostProcessing
   - HoneyDew
   - Ant
-  - 
-  - 
+  - Beetle
+  - Player
   - 
   - 
   - 
