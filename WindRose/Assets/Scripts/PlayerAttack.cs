@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    private PlayerPickups stick;
     private Transform Beetle;
     public float attackTimer;
     public float coolDown;
@@ -34,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
             attackTimer = 0;
         }
        
-        if(Input.GetKeyUp(KeyCode.Mouse0))
+        if(Input.GetKey(KeyCode.Mouse0))
         {
             if (attackTimer == 0)
             {
@@ -56,7 +57,15 @@ public class PlayerAttack : MonoBehaviour
             if (direction > 0)
             {
                 EnemyHealth eh = (EnemyHealth)Beetle.GetComponent("EnemyHealth");
-                eh.AddjustCurrentHealth(-10);
+                if (stick.stickPickedUp == false)
+                {
+                    eh.AddjustCurrentHealth(-10);
+                }
+
+                if (stick.stickPickedUp == true)
+                {
+                    eh.AddjustCurrentHealth(-25);
+                }
             }
         }
     }

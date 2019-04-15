@@ -4,31 +4,33 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public PlayerPickups Healthup;
     public int maxHealth = 100;
     public int curHealth = 100;
 
     public float healthBarLength;
-    // Start is called before the first frame update
+    
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         healthBarLength = Screen.width / 2;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Heal();
         AddjustCurrentHealth(0);
 
         if (curHealth == 0)
         {
             Destroy(gameObject);
         }
+
+       
     }
 
-    private void OnGUI()
-    {
-        GUI.Box(new Rect(10,Screen.height - 40 , healthBarLength, 20), curHealth + "/" + maxHealth);
-    }
+
     public void AddjustCurrentHealth (int adj)
     {
         curHealth += adj;
@@ -49,5 +51,18 @@ public class PlayerHealth : MonoBehaviour
         }
 
         healthBarLength  = (Screen.width / 2) * (curHealth / (float)maxHealth);
+    }
+
+    public void Heal()
+    {
+        if (Healthup.honeydewPickedUp > 0  && Input.GetKey(KeyCode.Q))
+        {
+            AddjustCurrentHealth(+50);
+            Healthup.honeydewPickedUp--;
+        }
+        else if ( Healthup.honeydewPickedUp < 0)
+        {
+            Healthup.honeydewPickedUp = 0;
+        }
     }
 }

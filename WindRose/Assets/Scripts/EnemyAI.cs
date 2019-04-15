@@ -12,12 +12,14 @@ public class EnemyAI : MonoBehaviour
     public float gap = 5f;
     public float chargeTimer;
     public float coolDown = 8.0f;
+    public bool Attacking;
 
     private Transform myTransform;
 
     private void Awake()
     {
         myTransform = transform;
+        Attacking = false;
     }
 
     void Start()
@@ -63,10 +65,16 @@ public class EnemyAI : MonoBehaviour
 
                     if (Vector3.Distance(target.position, myTransform.position) > maxDistance)
                     {
+                        Attacking = true;
                         moveSpeed = 7;
                         myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
                     }
                 }
+                return;
+            }
+            else
+            {
+                Attacking = false;
                 return;
             }
         }

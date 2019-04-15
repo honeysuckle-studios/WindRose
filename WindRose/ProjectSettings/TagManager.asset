@@ -9,6 +9,10 @@ TagManager:
   - Hidden Honeydew
   - HoneydewHand
   - Beetle
+  - Climbable
+  - Follower
+  - StickPickUp
+  - HoneyDewPickUp
   layers:
   - Default
   - TransparentFX
