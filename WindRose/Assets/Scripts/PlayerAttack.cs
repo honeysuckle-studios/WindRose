@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private PlayerPickups stick;
-    private Transform Beetle;
+    public PlayerPickups stick;
+    private GameObject Beetle;
     public float attackTimer;
     public float coolDown;
-    public float enemyLockOn = 15f;
+    private int damage;
   
     void Start()
     {
@@ -19,9 +19,18 @@ public class PlayerAttack : MonoBehaviour
   
     void Update()
     {
-        if(GameObject.FindGameObjectWithTag("Beetle"))
+        if (stick.stickPickedUp == true)
         {
-            Beetle = GameObject.FindGameObjectWithTag("Beetle").transform;
+            damage = 25;
+        }
+        else if (stick.stickPickedUp == false)
+        {
+            damage = 10;
+        }
+
+        if (GameObject.FindGameObjectWithTag("Beetle"))
+        {
+            Beetle = GameObject.FindGameObjectWithTag("Beetle");
         }
 
         if (attackTimer > 0)
@@ -48,24 +57,19 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        float distance = Vector3.Distance(Beetle.position, transform.position);
-        Vector3 dir = (Beetle.position - transform.position).normalized;
+        float distance = Vector3.Distance(Beetle.transform.position, transform.position);
+        Vector3 dir = (Beetle.transform.position - transform.position).normalized;
         float direction = Vector3.Dot(dir, transform.forward);
 
-        if (distance < 4f)
+
+        if (distance < 6f)
         {
             if (direction > 0)
             {
                 EnemyHealth eh = (EnemyHealth)Beetle.GetComponent("EnemyHealth");
-                if (stick.stickPickedUp == false)
-                {
-                    eh.AddjustCurrentHealth(-10);
-                }
+                eh.AddjustCurrentHealth(-damage);
 
-                if (stick.stickPickedUp == true)
-                {
-                    eh.AddjustCurrentHealth(-25);
-                }
+              
             }
         }
     }
