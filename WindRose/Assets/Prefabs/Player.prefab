@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcd8ebf080dff24d9f8177e9640f0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stick: {fileID: 0}
+  stick: {fileID: 6932216370606897948}
   attackTimer: 0
   coolDown: 2
 --- !u!114 &7671328452284136276

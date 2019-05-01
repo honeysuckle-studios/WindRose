@@ -471,7 +471,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!64 &1141257611
 MeshCollider:
@@ -1319,20 +1319,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beetle
       objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453763, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453760, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7350740253898453761, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.56
+      value: -10.23
       objectReference: {fileID: 0}
     - target: {fileID: 7350740253898453761, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 7350740253898453761, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.12
+      value: 14.33
       objectReference: {fileID: 0}
     - target: {fileID: 7350740253898453761, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
         type: 3}
@@ -1379,10 +1389,55 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1080022077864884}
+    - target: {fileID: 7350740253898453762, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2935088516649593221, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935088516649593221, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453775, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453765, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453765, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_WalkableMask
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052775398065994834, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453772, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453773, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350740253898453773, guid: 67fcbff5b0c5ba94ba7a5e5b38909106,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2976887238913006917, guid: 67fcbff5b0c5ba94ba7a5e5b38909106, type: 3}

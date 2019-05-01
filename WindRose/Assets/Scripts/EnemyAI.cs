@@ -13,6 +13,8 @@ public class EnemyAI : MonoBehaviour
     public float chargeTimer;
     public float coolDown = 8.0f;
     public bool Attacking;
+    private Animator Anim;
+    private bool Charging;
 
     private Transform myTransform;
 
@@ -25,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         maxDistance = 1;
+        Anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,11 +44,14 @@ public class EnemyAI : MonoBehaviour
 
         if (chargeTimer < 4)
         {
+            
             Charge();
+            
         }
 
         if(chargeTimer == 0)
         {
+            Anim.SetBool("Charging", false);
             chargeTimer = coolDown;
         }
      
@@ -59,13 +65,17 @@ public class EnemyAI : MonoBehaviour
             target = (GameObject.FindGameObjectWithTag("Player").transform);
             if (Vector3.Distance(transform.position, target.position) <= playerLockOn)
             {
+                Anim.SetBool("Charging", true);
                 if (Vector3.Distance(transform.position, target.position) >= gap)
                 {
+                    
                     myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed * Time.deltaTime);
 
                     if (Vector3.Distance(target.position, myTransform.position) > maxDistance)
                     {
+                       
                         Attacking = true;
+
                         moveSpeed = 7;
                         myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
                     }

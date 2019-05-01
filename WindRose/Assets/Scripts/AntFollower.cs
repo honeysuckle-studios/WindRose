@@ -9,6 +9,13 @@ public class AntFollower : MonoBehaviour
     public float gap = 3f;
     public float smellRange = 15f;
     public float rotationSpeed = 2f;
+    private bool walking;
+    private Animator Anim;
+
+    private void Start()
+    {
+        Anim = GetComponent<Animator>();
+    }
 
 
     void Update()
@@ -19,12 +26,14 @@ public class AntFollower : MonoBehaviour
             Player = (GameObject.FindGameObjectWithTag("Player").transform);
                 if (Vector3.Distance(transform.position, Player.position) >= gap)
                 {
-                    transform.position += transform.forward * speed * Time.deltaTime;
+                Anim.SetBool("Walking", true);
+                transform.position += transform.forward * speed * Time.deltaTime;
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Player.position - transform.position), rotationSpeed * Time.deltaTime);
                 return;
                 }
                 else
                 {
+                     Anim.SetBool("Walking", false);
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Player.position - transform.position), rotationSpeed * Time.deltaTime);
                 return;
                 }

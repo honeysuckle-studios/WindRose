@@ -7,12 +7,14 @@ public class PlayerHealth : MonoBehaviour
     public PlayerPickups Healthup;
     public int maxHealth = 100;
     public int curHealth = 100;
+    private Animator Anim;
 
     public float healthBarLength;
     
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        Anim = GetComponent<Animator>();
         healthBarLength = Screen.width / 2;
     }
 
@@ -57,6 +59,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Healthup.honeydewPickedUp > 0  && Input.GetKey(KeyCode.Q))
         {
+            Anim.SetTrigger("Heal");
             AddjustCurrentHealth(+50);
             Healthup.honeydewPickedUp--;
         }
