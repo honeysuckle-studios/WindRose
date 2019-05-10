@@ -60,6 +60,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fantasy Lands\Demo\Scripts\CameraMouseDrag.cs" />
+    <Compile Include="Assets\Fantasy Lands\Demo\Scripts\CameraMouseRotate.cs" />
+    <Compile Include="Assets\Fantasy Lands\Demo\Scripts\MoveMe.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\BloomComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\FogComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\GrainComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\TaaComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\BloomModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\DitheringModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\FogModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\GrainModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\UserLutModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Models\VignetteModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\PostProcessingComponent.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\PostProcessingContext.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\PostProcessingModel.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\PostProcessingProfile.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\Fantasy Lands\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\AntFollower.cs" />
     <Compile Include="Assets\Scripts\AntFollowHoneyDewScript.cs" />
     <Compile Include="Assets\Scripts\CameraControllingScript.cs" />
@@ -117,41 +165,86 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\Fantasy Lands\readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Blit.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+    <None Include="Assets\Fantasy Lands\Materials and Textures\Materials\Scrolling Layer.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\UI\Trackball.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Bloom.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\TAA.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\FXAA.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\Fantasy Lands\Materials and Textures\Materials\Scrolling Layer2.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\FantasyEnvironments\Environments\README.txt" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Fantasy Lands\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -355,13 +448,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.6f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/mgdun/OneDrive/Desktop/Class files/Unity Projects/WindRose/WindRose/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Emma/Documents/GitHub/WindRose/WindRose/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
