@@ -8,15 +8,15 @@ using UnityEngine.UI;
 public class ExitRoom : MonoBehaviour
 {
 
-    public UnityEvent EnterRoom;
-    public string Tag;
+  //  public UnityEvent EnterRoom;
+   // public string Tag;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(Tag))
+        if (other.gameObject.tag == "Player")
         {
-            EnterRoom.Invoke();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+           // EnterRoom.Invoke();
+            SceneManager.LoadScene(0);
         }
     }
 }
