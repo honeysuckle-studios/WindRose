@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stick: {fileID: 6932216370606897948}
   attackTimer: 0
-  coolDown: 2
+  coolDown: 0.1
 --- !u!114 &7671328452284136276
 MonoBehaviour:
   m_ObjectHideFlags: 0

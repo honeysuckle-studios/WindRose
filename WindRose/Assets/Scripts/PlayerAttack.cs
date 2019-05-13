@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         attackTimer = 0;
-        coolDown = 2.0f;
+        coolDown = 0.1f;
         Anim = GetComponent<Animator>();
     }
 
@@ -60,11 +60,9 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        
         float distance = Vector3.Distance(Beetle.transform.position, transform.position);
         Vector3 dir = (Beetle.transform.position - transform.position).normalized;
         float direction = Vector3.Dot(dir, transform.forward);
-
 
         if (distance < 6f)
         {

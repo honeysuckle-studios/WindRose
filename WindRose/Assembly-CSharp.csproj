@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\HoneyDewScript.cs" />
     <Compile Include="Assets\Scripts\LevelLoad.cs" />
     <Compile Include="Assets\Scripts\Main_Menu.cs" />
+    <Compile Include="Assets\Scripts\MainCursorScript.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />

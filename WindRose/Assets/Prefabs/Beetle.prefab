@@ -49,8 +49,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9807829, y: 1.3480566, z: 4.26405}
-  m_Center: {x: 0.13784748, y: 0.17402828, z: 0.5281627}
+  m_Size: {x: 2.8081665, y: 1.4473734, z: 3.1492386}
+  m_Center: {x: 0.027942657, y: 0.2236867, z: 0.6328621}
 --- !u!54 &7350740253898453773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ee1affd07aabb4ababd1935c0ca6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  curHealth: 50
+  maxHealth: 800
+  curHealth: 800
   healthBarLength: 0
 --- !u!114 &7350740253898453763
 MonoBehaviour:
@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 3
-  maxDistance: 1
-  playerLockOn: 15
-  gap: 1
+  maxDistance: 3
+  playerLockOn: 25
+  gap: 2
   chargeTimer: 0
   coolDown: 8
   Attacking: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   attackTimer: 0
-  coolDown: 2
+  coolDown: 1
 --- !u!195 &7350740253898453765
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 0.5
   m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 3
   m_ObstacleAvoidanceType: 4
 --- !u!95 &2052775398065994834
 Animator:
@@ -181,10 +181,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4435220731050244, guid: f4bd1ca6a44d49842a65180bc77c941f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4435220731050244, guid: f4bd1ca6a44d49842a65180bc77c941f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
@@ -193,16 +189,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4435220731050244, guid: f4bd1ca6a44d49842a65180bc77c941f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4435220731050244, guid: f4bd1ca6a44d49842a65180bc77c941f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4435220731050244, guid: f4bd1ca6a44d49842a65180bc77c941f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4435220731050244, guid: f4bd1ca6a44d49842a65180bc77c941f, type: 3}
       propertyPath: m_RootOrder

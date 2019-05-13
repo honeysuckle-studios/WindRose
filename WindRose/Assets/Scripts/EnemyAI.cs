@@ -8,8 +8,8 @@ public class EnemyAI : MonoBehaviour
     private int moveSpeed;
     public int rotationSpeed;
     public int maxDistance;
-    public float playerLockOn = 15f;
-    public float gap = 5f;
+    public float playerLockOn = 25f;
+    public float gap = 3f;
     public float chargeTimer;
     public float coolDown = 8.0f;
     public bool Attacking;
@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        maxDistance = 1;
+        maxDistance = 2;
         Anim = GetComponent<Animator>();
     }
 
@@ -73,9 +73,7 @@ public class EnemyAI : MonoBehaviour
 
                     if (Vector3.Distance(target.position, myTransform.position) > maxDistance)
                     {
-                       
                         Attacking = true;
-
                         moveSpeed = 7;
                         myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
                     }

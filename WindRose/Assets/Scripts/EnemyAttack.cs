@@ -11,7 +11,7 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         attackTimer = 0;
-        coolDown = 2.0f;
+        coolDown = 1.0f;
     }
 
 
@@ -37,7 +37,7 @@ public class EnemyAttack : MonoBehaviour
         Vector3 dir = (target.transform.position - transform.position).normalized;
         float direction = Vector3.Dot(dir, transform.forward);
 
-        if (distance < 2f)
+        if (distance < 4f)
         {
             if (direction > 0)
             {

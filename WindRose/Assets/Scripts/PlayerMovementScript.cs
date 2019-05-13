@@ -30,6 +30,18 @@ public class PlayerMovementScript : MonoBehaviour
 
     public void Move()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Anim.SetBool("Run", true);
+            moveSpeed = 12;
+            
+        }
+        else
+        {
+            Anim.SetBool("Run", false);
+            moveSpeed = 6;
+        }
+
         Anim.SetFloat("Speed", moving);
         Anim.SetFloat("Speed2", moving2);
         float yStore = moveDirection.y;
