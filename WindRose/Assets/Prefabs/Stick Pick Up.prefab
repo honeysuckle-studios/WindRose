@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7625848386369369012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6973129783718103357}
+  - component: {fileID: 1841257820267082541}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6973129783718103357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625848386369369012}
+  m_LocalRotation: {x: -0.1570464, y: 0.35574234, z: 0.29767597, w: 0.8718789}
+  m_LocalPosition: {x: 0.006, y: -0.006, z: -0.002}
+  m_LocalScale: {x: 0.88632476, y: 0.8863249, z: 0.8863249}
+  m_Children: []
+  m_Father: {fileID: 168258427560639000}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1841257820267082541
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625848386369369012}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.8144702, b: 0, a: 1}
+  m_Intensity: 3
+  m_Range: 5
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &8947571142339509957
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +83,7 @@ GameObject:
   - component: {fileID: 8947571142339509959}
   - component: {fileID: 8947571142339509958}
   - component: {fileID: 6075376816145118026}
+  - component: {fileID: 7525174568379593010}
   m_Layer: 0
   m_Name: Stick Pick Up
   m_TagString: StickPickUp
@@ -29,7 +99,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8947571142339509957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.34, y: 0.29, z: 1.07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 168258427560639000}
@@ -122,6 +192,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &7525174568379593010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947571142339509957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cba17b99740b79949a11e41cae8ded06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &169546714704890644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,6 +249,18 @@ PrefabInstance:
     - target: {fileID: 4397991949922572, guid: b9caed25305ba6848a77526529dafc6d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.8718779
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397991949922572, guid: b9caed25305ba6848a77526529dafc6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -29.934002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397991949922572, guid: b9caed25305ba6848a77526529dafc6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -78.39001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397991949922572, guid: b9caed25305ba6848a77526529dafc6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -5.854
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9caed25305ba6848a77526529dafc6d, type: 3}
